@@ -1,0 +1,17 @@
+
+<div class = "container">
+  <div class = "row">
+    <div *ngFor = "let model of models; let i=index;">
+      <div *ngIf = "i < 3" class="col col-md-4">
+        <MapCard align = center [model] = "model"></MapCard>
+      </div>
+    </div>
+  </div>
+  <div class = "row" style = "margin-top: 1%">
+    <div *ngFor = "let model of models; let i=index;">
+      <div *ngIf = "i >= 3"class="col col-md-4">
+        <MapCard align = "center" [model] = "model"></MapCard>
+      </div>
+    </div>
+  </div>
+</div>
