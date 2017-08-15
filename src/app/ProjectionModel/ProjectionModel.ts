@@ -1,6 +1,8 @@
 export class ProjectionModel {
-    name: string;
-    image: string;
-    description: string;
-    personality: string;
+    Name: string;
+    Image: string;
+    Description: string;
+    Personality: string;
+    Credit: string;
+    CreditURL: string;
 }

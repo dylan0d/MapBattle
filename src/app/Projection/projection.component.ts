@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { MapCard } from '../map-card/map-card.component';
 import { ProjectionModel } from '../ProjectionModel/ProjectionModel'
 
 @Component({
@@ -15,5 +16,4 @@ export class Projection implements OnInit {
   ngOnInit() {
     console.log ("my name is", this.models)
   }
-
 }

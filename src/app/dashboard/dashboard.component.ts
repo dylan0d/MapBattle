@@ -19,45 +19,58 @@ export class DashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.Mercator.name = "Mercator";
-    this.Mercator.image = "dadas";
-    this.Mercator.description = "good for sailing";
-    this.Mercator.personality = "your to stupid";
+    this.Mercator.Name = "Mercator";
+    this.Mercator.Image = "assets/img/projections/Mercator.jpg";
+    this.Mercator.Description = "good for sailing";
+    this.Mercator.Personality = "your to stupid";
+    this.Mercator.Credit = "By Strebe - Own work, CC BY-SA 3.0";
+    this.Mercator.CreditURL = "https://commons.wikimedia.org/w/index.php?curid=16115307";
 
     this.Models.push(this.Mercator);
 
-    this.Robinson.name = "Robinson";
-    this.Robinson.image = "dadas";
-    this.Robinson.description = "Looks the Best";
-    this.Robinson.personality = "Running Shoes";
+    this.Robinson.Name = "Robinson";
+    this.Robinson.Image = "assets/img/projections/Robinson.jpg";
+    this.Robinson.Description = "Looks the Best";
+    this.Robinson.Personality = "Running Shoes";
+    this.Robinson.Credit = "By Strebe - Own work, CC BY-SA 3.0";
+    this.Robinson.CreditURL = "https://commons.wikimedia.org/w/index.php?curid=16115337";
 
     this.Models.push(this.Robinson);
 
-    this.Dymaxion.name = "Dymaxion";
-    this.Dymaxion.image = "dadas";
-    this.Dymaxion.description = "No Distortion";
-    this.Dymaxion.personality = "Toed Shoes";
+    this.Dymaxion.Name = "Dymaxion";
+    this.Dymaxion.Image = "assets/img/projections/Dymaxion.svg";
+    this.Dymaxion.Description = "No Distortion";
+    this.Dymaxion.Personality = "Toed Shoes";
+    this.Dymaxion.Credit = "By Eric Gaba, Wikimedia Commons user Sting, CC BY-SA 2.5";
+    this.Dymaxion.CreditURL = "https://commons.wikimedia.org/w/index.php?curid=11881327";
 
     this.Models.push(this.Dymaxion);
 
-    this.WinkelTripel.name = "Winkel-Tripel";
-    this.WinkelTripel.image = "dadas";
-    this.WinkelTripel.description = "No Distortion";
-    this.WinkelTripel.personality = "Toed Shoes";
+    this.WinkelTripel.Name = "Winkel-Tripel";
+    this.WinkelTripel.Image = "assets/img/projections/Winkel-Tripel.jpg";
+    this.WinkelTripel.Description = "Less Distortion";
+    this.WinkelTripel.Personality = "Hates Toed Shoes";
+    this.WinkelTripel.Credit = "By Strebe - Own work, CC BY-SA 3.0";
+    this.WatermanButterfly.CreditURL = "https://commons.wikimedia.org/w/index.php?curid=16115375";
 
     this.Models.push(this.WinkelTripel);
 
-    this.WatermanButterfly.name = "Waterman Butterfly";
-    this.WatermanButterfly.image = "dadas";
-    this.WatermanButterfly.description = "Funny Looking";
-    this.WatermanButterfly.personality = "1909 Cahill";
+    this.WatermanButterfly.Name = "Waterman Butterfly";
+    this.WatermanButterfly.Image = "assets/img/projections/Waterman-Butterfly.jpg";
+    this.WatermanButterfly.Description = "Funny Looking";
+    this.WatermanButterfly.Personality = "1909 Cahill";
+    this.WatermanButterfly.Credit = "By Steve waterman - Own work, CC BY-SA 3.0";
+    this.WatermanButterfly.CreditURL =  "https://commons.wikimedia.org/w/index.php?curid=30652627";
+    
 
     this.Models.push(this.WatermanButterfly);
 
-    this.GallPeters.name = "Gall-Peters";
-    this.GallPeters.image = "dadas";
-    this.GallPeters.description = "Shit";
-    this.GallPeters.personality = "I hate you";
+    this.GallPeters.Name = "Gall-Peters";
+    this.GallPeters.Image = "assets/img/projections/Gall–Peters.jpg";
+    this.GallPeters.Description = "Shit";
+    this.GallPeters.Personality = "I hate you";
+    this.GallPeters.Credit = "By Strebe - Own work, CC BY-SA 3.0";
+    this.GallPeters.CreditURL =  "https://commons.wikimedia.org/w/index.php?curid=16115242";
 
     this.Models.push(this.GallPeters);
   }
