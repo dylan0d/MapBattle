@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { MaterialModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,6 +29,7 @@ import { MapCard } from './map-card/map-card.component';
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
+    HttpClientModule,
     MaterialModule,
     MdIconModule,
     AppRoutingModule,

@@ -5,6 +5,8 @@ from django.views.decorators.csrf import csrf_exempt
 
 from .models import Question, Choice
 
+import json
+
 
 @csrf_exempt
 def index(request):
@@ -39,9 +41,24 @@ def vote(request, question_id):
         # Always return an HttpResponseRedirect after successfully dealing
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
-        return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+        response = get_votes(question)
+        return HttpResponse(response)
+    #HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
 
 @csrf_exempt
 def results(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     return render(request, 'polls/results.html', {'question': question})
+
+@csrf_exempt
+def startup(request, question_id):
+    question = get_object_or_404(Question, pk=question_id)
+    return HttpResponse(get_votes(question))
+
+def get_votes(question):
+    all_votes = question.choice_set.all()
+    print (all_votes)
+    response = []
+    for choice in all_votes:
+        response.append({'name':choice.choice_text, 'choice': choice.id, 'votes': choice.votes})
+    return json.dumps(response)
