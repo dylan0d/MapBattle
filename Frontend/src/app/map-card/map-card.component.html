@@ -1,4 +1,4 @@
-<md-card style = "height:400px;">
+<md-card style>
   <md-card-header>
     <div md-card-avatar> <md-icon>map</md-icon></div>
     <md-card-title>{{model.Name}}</md-card-title>
@@ -9,7 +9,10 @@
   <md-card-content>
     <div>{{model.Description}}</div>
     <div>{{model.Personality}}</div>
+    <div>{{model.Votes}}</div>
   </md-card-content>
+
+  <md-card-actions><button md-button (click) = "vote()">Vote!</button></md-card-actions>
 
   <md-card-footer>    
       <div><a href="{{model.CreditURL}}">{{model.Credit}}</a></div>

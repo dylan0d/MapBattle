@@ -30,7 +30,8 @@
 npm-debug.log
 testem.log
 /typings
-
+*.pyc
+*.sqlite3
 # e2e
 /e2e/*.js
 /e2e/*.map
