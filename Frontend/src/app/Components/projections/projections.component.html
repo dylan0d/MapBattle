@@ -2,7 +2,7 @@
 <div class = "container">
   <div class = "row" style = "margin-bottom: 3%">
     <div *ngFor = "let col of [0,1,2]; let i=index;">
-      <div class = "col col-md-4">
+      <div class = "col col-sm-4">
         <div *ngFor = "let model of models; let j=index;">
           <div *ngIf = "j %3 === i">
             <br><map-card align = center [model] = "model" (updateVotes) = "updateVotes($event)"></map-card>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Projections } from '../Projections/projections.component';
-import { ProjectionModel } from '../ProjectionModel/ProjectionModel'
+import { ProjectionModel } from '../../Models/ProjectionModel/ProjectionModel'
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',

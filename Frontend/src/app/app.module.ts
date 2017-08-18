@@ -10,11 +10,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdIconModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { Projections } from './projections/projections.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { Projections } from './Components/projections/projections.component';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { AlertModule } from 'ngx-bootstrap';
-import { MapCard } from './map-card/map-card.component';
+import { MapCard } from './Components/map-card/map-card.component';
 
 
 @NgModule({

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { ProjectionModel } from '../ProjectionModel/ProjectionModel';
+import { ProjectionModel } from '../../Models/ProjectionModel/ProjectionModel';
 import { HttpClient } from '@angular/common/http';
 import { RequestOptions, Headers } from '@angular/http';
 import { HttpHeaders } from '@angular/common/http';

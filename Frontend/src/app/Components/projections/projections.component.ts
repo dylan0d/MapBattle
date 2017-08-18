@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MapCard } from '../map-card/map-card.component';
-import { ProjectionModel } from '../ProjectionModel/ProjectionModel';
+import { ProjectionModel } from '../../Models/ProjectionModel/ProjectionModel';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
