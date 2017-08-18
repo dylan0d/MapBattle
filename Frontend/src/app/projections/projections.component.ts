@@ -4,11 +4,11 @@ import { ProjectionModel } from '../ProjectionModel/ProjectionModel';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'projection',
-  templateUrl: './projection.component.html',
-  styleUrls: ['./projection.component.css']
+  selector: 'projections',
+  templateUrl: './projections.component.html',
+  styleUrls: ['./projections.component.css']
 })
-export class Projection implements OnInit {
+export class Projections implements OnInit {
 
   @Input() models: ProjectionModel[];
 

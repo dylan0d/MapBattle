@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { MapCardComponent } from './map-card.component';
+import { MapCard } from './map-card.component';
 
-describe('MapCardComponent', () => {
-  let component: MapCardComponent;
-  let fixture: ComponentFixture<MapCardComponent>;
+describe('MapCard', () => {
+  let component: MapCard;
+  let fixture: ComponentFixture<MapCard>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MapCardComponent ]
+      declarations: [ MapCard ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MapCardComponent);
+    fixture = TestBed.createComponent(MapCard);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

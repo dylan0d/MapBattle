@@ -5,7 +5,7 @@ import { RequestOptions, Headers } from '@angular/http';
 import { HttpHeaders } from '@angular/common/http';
 
 @Component({
-  selector: 'MapCard',
+  selector: 'map-card',
   templateUrl: './map-card.component.html',
   styleUrls: ['./map-card.component.css']
 })

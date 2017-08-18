@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Projection } from '../Projection/projection.component';
+import { Projections } from '../Projections/projections.component';
 import { ProjectionModel } from '../ProjectionModel/ProjectionModel'
 @Component({
   selector: 'app-dashboard',

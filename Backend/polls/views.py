@@ -57,7 +57,6 @@ def startup(request, question_id):
 
 def get_votes(question):
     all_votes = question.choice_set.all()
-    print (all_votes)
     response = []
     for choice in all_votes:
         response.append({'name':choice.choice_text, 'choice': choice.id, 'votes': choice.votes})
