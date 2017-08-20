@@ -15,6 +15,7 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { AlertModule } from 'ngx-bootstrap';
 import { MapCard } from './Components/map-card/map-card.component';
+import { VoteService } from './Services/vote.service'
 
 
 @NgModule({

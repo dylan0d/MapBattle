@@ -5,6 +5,6 @@ export class ProjectionModel {
     Personality: string;
     Credit: string;
     CreditURL: string;
-    Votes: string;
+    Votes: number;
     Id: string;
 }

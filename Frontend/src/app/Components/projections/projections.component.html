@@ -5,7 +5,7 @@
       <div class = "col col-sm-4">
         <div *ngFor = "let model of models; let j=index;">
           <div *ngIf = "j %3 === i">
-            <br><map-card align = center [model] = "model" (updateVotes) = "updateVotes($event)"></map-card>
+            <br><map-card align = center [model] = "model" (updateVotes) = "updateVotes($event)" [totalVotes] = "totalVotes"></map-card>
           </div>
         </div>
       </div>

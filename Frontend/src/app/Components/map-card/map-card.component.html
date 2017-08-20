@@ -1,4 +1,4 @@
-<md-card style>
+<md-card>
   <md-card-header>
     <div md-card-avatar> <md-icon>map</md-icon></div>
     <md-card-title>{{model.Name}}</md-card-title>
@@ -9,6 +9,12 @@
   <md-card-content>
     <div>{{model.Description}}</div>
     <div>{{model.Personality}}</div>
+    <div class="progress" style="text-align:right; margin-top:4%;">
+      <div class="progress-bar progress-bar-striped bg-info" role="progressbar" attr.aria-valuenow="{{percentageString}}"
+      aria-valuemin="0" aria-valuemax="100" [style.width]="percentageString + '%'">
+      </div>
+      {{percentage}}%
+    </div>
     <div>{{model.Votes}}</div>
   </md-card-content>
 
