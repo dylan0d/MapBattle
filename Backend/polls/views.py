@@ -3,7 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
 
-from .models import Question, Choice
+from .models import Question, Projection
 
 import json
 
@@ -28,8 +28,8 @@ def results(request, question_id):
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     try:
-        selected_choice = question.choice_set.get(pk=request.POST['choice'])
-    except (KeyError, Choice.DoesNotExist):
+        selected_choice = question.projection_set.get(pk=request.POST['choice'])
+    except (KeyError, Projection.DoesNotExist):
         # Redisplay the question voting form.
         return render(request, 'polls/detail.html', {
             'question': question,
@@ -56,8 +56,13 @@ def startup(request, question_id):
     return HttpResponse(get_votes(question))
 
 def get_votes(question):
-    all_votes = question.choice_set.all()
+    all_projections = question.projection_set.all()
     response = []
-    for choice in all_votes:
-        response.append({'name':choice.choice_text, 'choice': choice.id, 'votes': choice.votes})
+    for projection in all_projections:
+        response.append({
+                            'name':projection.name, 'id': projection.id, 'votes': projection.votes, 
+                            'decription': projection.description, 'personality': projection.personality,
+                            'credit': projection.credit, 'creditURL': projection.creditURL, 
+                            'image_path': projection.image_path
+                        })
     return json.dumps(response)
