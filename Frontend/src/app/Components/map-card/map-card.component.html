@@ -15,10 +15,10 @@
       </div>
       {{percentage}}%
     </div>
-    <div>{{model.Votes}}</div>
+    <div>{{model.Votes}} Votes</div>
   </md-card-content>
 
-  <md-card-actions><button md-button (click) = "vote()">Vote!</button></md-card-actions>
+  <md-card-actions><button md-button (click) = "vote()">Vote for {{model.Name}}!</button></md-card-actions>
 
   <md-card-footer>    
       <div><a href="{{model.CreditURL}}">{{model.Credit}}</a></div>
