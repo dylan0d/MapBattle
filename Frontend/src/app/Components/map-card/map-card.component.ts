@@ -1,49 +1,58 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges, Inject } from '@angular/core';
 import { ProjectionModel } from '../../Models/ProjectionModel/ProjectionModel';
 import { HttpClient } from '@angular/common/http';
 import { RequestOptions, Headers } from '@angular/http';
 import { HttpHeaders } from '@angular/common/http';
 import { VoteService } from '../../Services/vote.service';
+import { MdDialog, MdDialogRef, MD_DIALOG_DATA } from '@angular/material';
+import { MapInfoComponent } from '../map-info/map-info.component';
 @Component({
   selector: 'map-card',
   templateUrl: './map-card.component.html',
   styleUrls: ['./map-card.component.css']
 })
-export class MapCard implements OnInit {
+export class MapCard implements OnInit, OnChanges {
   @Input() model: ProjectionModel;
-  @Input() totalVotes: number;  
+  @Input() totalVotes: number;
   @Output() updateVotes: EventEmitter<any> = new EventEmitter();
-  percentage: number = 0;
+  percentage = 0;
   percentageString = '0';
 
-  constructor(private http: HttpClient, private voteService: VoteService) {
+  constructor(private http: HttpClient, private voteService: VoteService, public dialog: MdDialog) {
    }
 
   ngOnInit() {
     console.log(this.model.Name, this.model.Votes, this.totalVotes);
   }
 
-  ngOnChanges(args: any[]){
-    this.percentage = Math.round((this.model.Votes/this.totalVotes)*100);   
-    this.percentageString = this.percentage.toString()
+  ngOnChanges (changes: SimpleChanges) {
+    this.percentage = Math.round((this.model.Votes / this.totalVotes) * 100);
+    this.percentageString = this.percentage.toString();
   }
 
   vote() {
-    let res = this.voteService.vote(this.model.Id).subscribe( 
+      const res = this.voteService.vote(this.model.Id).subscribe(
       res => this.successfulVote(res),
       err => this.unsuccessfulVote(err)
-    )
+    );
   }
 
-  successfulVote(res) {
-    console.log(res)
-    res.forEach(element => {
+  successfulVote(maps) {
+    console.log(maps);
+    maps.forEach(element => {
       if (element.name === this.model.Name) {
         this.model.Votes = element.votes;
       }
     });
-    this.updateVotes.emit(res);
+    this.updateVotes.emit(maps);
   }
+
+  showInfo() {
+      const dialogRef = this.dialog.open(MapInfoComponent, {
+      width: '250px',
+      data: { name: 'this.name', animal: 'this.animal' }
+    });
+  };
 
   unsuccessfulVote(err) {
   }

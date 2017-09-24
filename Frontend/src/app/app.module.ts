@@ -15,7 +15,8 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { AlertModule } from 'ngx-bootstrap';
 import { MapCard } from './Components/map-card/map-card.component';
-import { VoteService } from './Services/vote.service'
+import { VoteService } from './Services/vote.service';
+import { MapInfoComponent } from './Components/map-info/map-info.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { VoteService } from './Services/vote.service'
     AppComponent,
     Projections,
     DashboardComponent,
-    MapCard
+    MapCard,
+    MapInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,10 @@ import { VoteService } from './Services/vote.service'
   ],
   exports: [
    Projections,
-   DashboardComponent 
+   DashboardComponent
+  ],
+  entryComponents: [
+    MapInfoComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

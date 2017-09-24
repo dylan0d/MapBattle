@@ -10,7 +10,7 @@ export class VoteService {
     constructor(private http: HttpClient) { }
 
     getVotes(): Observable<Object> {
-        return this.http.get('http://127.0.0.1:8000/polls/1/tally/')
+        return this.http.get('http://127.0.0.1:8000/polls/1/tally/');
     }
 
     vote(id): Observable<Object> {
