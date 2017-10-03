@@ -61,7 +61,7 @@ def get_votes(question):
     for projection in all_projections:
         response.append({
                             'name':projection.name, 'id': projection.id, 'votes': projection.votes, 
-                            'decription': projection.description, 'personality': projection.personality,
+                            'description': projection.description, 'personality': projection.personality,
                             'credit': projection.credit, 'creditURL': projection.creditURL, 
                             'image_path': projection.image_path
                         })

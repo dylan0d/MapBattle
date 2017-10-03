@@ -4,7 +4,7 @@
     <md-card-title>{{model.Name}}</md-card-title>
   </md-card-header>
 
-  <img md-card-image src="{{model.Image}}">
+  <img md-card-image src="{{model.Image}}"/>
 
   <md-card-content>
     <div>{{model.Description}}</div>
@@ -19,8 +19,8 @@
   </md-card-content>
 
   <md-card-actions>
-    <button md-button (click) = "showInfo()" class="alert alert-info" style = "margin-bottom: 1%">More Info</button>
-    <button md-button (click) = "vote()" class="alert alert-success">Vote for {{model.Name}}!</button>
+    <button md-button (click) = "showInfo()" class="btn btn-info" style = "margin-bottom: 1%">More Info</button>
+    <button md-button (click) = "vote()" class="btn btn-success">Vote for {{model.Name}}!</button>
   </md-card-actions>
 
   <md-card-footer>    

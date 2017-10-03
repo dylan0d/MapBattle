@@ -49,8 +49,7 @@ export class MapCard implements OnInit, OnChanges {
 
   showInfo() {
       const dialogRef = this.dialog.open(MapInfoComponent, {
-      width: '250px',
-      data: { name: 'this.name', animal: 'this.animal' }
+      data: { projection: this.model }
     });
   };
 

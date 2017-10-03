@@ -1,1 +1,12 @@
-Hey you want to learn more about a map, that's very cool and you're a cool dude
+<h1 md-dialog-title> INFO </h1>
+<md-dialog-content> 
+    <div style = "text-align: center">
+        <img src="{{data.projection.Image}}" style="width:50%; height:50%"/>
+    </div>
+    Hey you want to learn more about {{data.projection.Name}}, that's very cool and you're a cool dude 
+</md-dialog-content>
+<md-dialog-actions style = "text-align: center">
+    <button type = 'button' class = 'btn btn-info' style = 'margin-right: 2%'> Find out more</button>
+    <button type = 'button' class = 'btn btn-danger' md-dialog-close>Close</button>    
+</md-dialog-actions>
+

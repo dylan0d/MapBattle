@@ -13,6 +13,7 @@ export class MapInfoComponent implements OnInit {
     @Inject(MD_DIALOG_DATA) public data: any) { }
 
   ngOnInit() {
+    console.log(this.data);
   }
 
   onNoClick(): void {
