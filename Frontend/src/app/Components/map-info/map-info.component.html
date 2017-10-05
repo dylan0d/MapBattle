@@ -1,12 +1,13 @@
-<h1 md-dialog-title> INFO </h1>
-<md-dialog-content> 
-    <div style = "text-align: center">
+<h1 md-dialog-title> {{data.projection.Name}}</h1>
+<md-dialog-content style = "text-align: center"> 
+    <div style = "text-align: center; margin-bottom: 2%">
         <img src="{{data.projection.Image}}" style="width:50%; height:50%"/>
     </div>
-    Hey you want to learn more about {{data.projection.Name}}, that's very cool and you're a cool dude 
+    <div style = "margin-bottom: 2%">
+        {{data.projection.Long_Description}}
+    </div>
 </md-dialog-content>
 <md-dialog-actions style = "text-align: center">
-    <button type = 'button' class = 'btn btn-info' style = 'margin-right: 2%'> Find out more</button>
+    <button type = 'button' class = 'btn btn-info' style = 'margin-right: 2%' (click)="getMoreInfo()"> Find out more</button>
     <button type = 'button' class = 'btn btn-danger' md-dialog-close>Close</button>    
 </md-dialog-actions>
-

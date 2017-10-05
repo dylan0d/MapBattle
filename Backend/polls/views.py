@@ -60,9 +60,10 @@ def get_votes(question):
     response = []
     for projection in all_projections:
         response.append({
-                            'name':projection.name, 'id': projection.id, 'votes': projection.votes, 
-                            'description': projection.description, 'personality': projection.personality,
-                            'credit': projection.credit, 'creditURL': projection.creditURL, 
-                            'image_path': projection.image_path
-                        })
+            'name':projection.name, 'id': projection.id, 'votes': projection.votes, 
+            'description': projection.description, 'personality': projection.personality,
+            'credit': projection.credit, 'creditURL': projection.creditURL, 
+            'image_path': projection.image_path, 'info_url': projection.more_info_url,
+            'long_description': projection.long_description
+        })
     return json.dumps(response)

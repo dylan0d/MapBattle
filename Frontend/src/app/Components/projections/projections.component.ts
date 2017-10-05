@@ -38,6 +38,8 @@ export class Projections implements OnInit {
       temp.Credit = model.credit;
       temp.CreditURL = model.creditURL;
       temp.Image = model.image_path;
+      temp.Long_Description = model.long_description;
+      temp.MoreInfo = model.info_url;
       this.totalVotes += model.votes;
       this.models.push(temp);
     });

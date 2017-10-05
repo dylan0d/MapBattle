@@ -7,4 +7,6 @@ export class ProjectionModel {
     CreditURL: string;
     Votes: number;
     Id: string;
+    Long_Description: string;
+    MoreInfo: string;
 }

@@ -20,6 +20,8 @@ class Projection(models.Model):
     credit = models.CharField(max_length=2000, null = True)
     creditURL = models.CharField(max_length=2000, null = True)
     image_path = models.CharField(max_length=2000, null = True)
+    long_description = models.CharField(max_length=2000, null = True)
+    more_info_url = models.CharField(max_length=2000, null = True)
     votes = models.IntegerField(default=0)
     def __str__(self):
         return self.name

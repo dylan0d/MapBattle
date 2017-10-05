@@ -20,4 +20,8 @@ export class MapInfoComponent implements OnInit {
     this.dialogRef.close();
   }
 
+  getMoreInfo() {
+    window.open(this.data.projection.MoreInfo, '_blank');
+  }
+
 }
